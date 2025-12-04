@@ -30,8 +30,8 @@ Características principales:
     'assets': {
         'point_of_sale.assets': [
             'l10n_gt_mayan/static/src/js/ProductScreen.js',
-            'l10n_gt_mayan/static/src/js/Screens/ProductScreen/ControlButtons/SubmitOrderButton.js',
-            'l10n_gt_mayan/static/src/xml/multiprint_templates.xml',
+            #'l10n_gt_mayan/static/src/js/Screens/ProductScreen/ControlButtons/SubmitOrderButton.js',
+            #'l10n_gt_mayan/static/src/xml/multiprint_templates.xml',
         ],
     },
 }
