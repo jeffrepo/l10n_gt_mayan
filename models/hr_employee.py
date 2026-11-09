@@ -1,12 +1,15 @@
-# -*- coding: utf-8 -*-
+from odoo import api, fields, models
 
-from odoo import models, fields
 
-class HREmployee(models.Model):
-    _inherit = 'hr.employee'
+class HrEmployee(models.Model):
+    _inherit = "hr.employee"
 
     allow_delete_line = fields.Boolean(
         string="Permitir eliminar línea",
         help="Este empleado tendrá permiso para eliminar líneas en el punto de venta.",
-        default=False
+        default=False,
     )
+
+    @api.model
+    def _load_pos_data_fields(self, config_id):
+        return [*super()._load_pos_data_fields(config_id), "allow_delete_line"]
